@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "concurrently -k npm:server:*",
+    "server:gateway": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/gateway.ts",
+    "server:user": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/user.ts",
+    "server:tweet": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/tweet.ts"
+  },
+  "dependencies": {
+    "@apollo/federation": "^0.36.1",
+    "@apollo/gateway": "^2.1.0",
+    "apollo-server": "^3.10.2",
+    "concurrently": "^7.3.0",
+    "mongoose": "^6.5.4",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1"
+  }
+}
